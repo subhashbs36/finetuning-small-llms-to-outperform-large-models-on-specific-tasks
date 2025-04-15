@@ -124,4 +124,3 @@ Final Year CSE (AI & ML) | Passionate about LLMs & domain-specific AI
 [LinkedIn](https://www.linkedin.com/in/b-s-vivek/) | [GitHub](https://github.com/astronova001)
 
 ---
-  # finetuning-small-llms-to-outperform-large-models-on-specific-tasks
