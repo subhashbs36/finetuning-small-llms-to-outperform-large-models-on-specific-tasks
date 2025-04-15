@@ -1,6 +1,37 @@
 ## 🧠 Fine-Tuning a Domain-Specific LLM that Outperformed GPT-4o & Gemini
 
-This project demonstrates how a carefully fine-tuned domain-specific Language Model was able to outperform state-of-the-art models like **GPT-4o** and **Gemini** on a targeted task involving **missing key point identification** from text-based answers.
+This project explores how smaller, fine-tuned Language Models (LLMs) can outperform massive general-purpose models like **GPT-4o** and **Gemini** on **domain-specific tasks**. In this case, the task was to **identify missing key points** in answers generated from long-form content — a challenge where precision and contextual understanding are vital.
+
+Instead of relying on brute-force parameter counts, this project leverages **LoRA-based fine-tuning** and **domain-specific data** to boost performance in a task where large models often return vague or incomplete responses.
+
+---
+
+## 🌟 Problem Statement
+
+Given an answer generated from a long paragraph, the goal is to **evaluate whether all required key points are present**, and if not, identify the **missing ones**. This task is critical in domains like:
+- Education: Evaluating student answers.
+- Legal: Ensuring contract completeness.
+- Medical: Validating report summaries.
+
+### 🔍 Example
+**Paragraph (excerpt):**
+> Air pollution has a wide range of health impacts including chronic bronchitis, heart disease, and eye irritation. Global studies have conclusively shown these effects even at sub-toxic levels...
+
+**Key Points:**
+- Chronic bronchitis is a major health effect.
+- Air pollution impacts are proven by global studies.
+- Eye irritation occurs due to particulates.
+- Sub-toxic levels are still dangerous.
+
+**Answer:**
+> Air pollution causes chronic bronchitis and is harmful even at low levels. Global studies support this.
+
+**Expected Output:**
+```json
+{
+  "Points_Missed": ["Eye irritation occurs due to particulates"]
+}
+```
 
 ---
 
@@ -39,10 +70,12 @@ We used **OpenAI GPT-4o via Azure** to synthetically generate QA pairs from long
 ```json
 {
   "Answer": "paragraph with missing key points",
-  "key_points": ["point1", "point2", ...],
-  "PointsMissed": ["missing_point1", "missing_point2"]
+  "key_points": ["point1", "point2"],
+  "PointsMissed": ["missing_point1"]
 }
 ```
+
+These were converted to **Alpaca-style prompts** for training.
 
 ---
 
@@ -60,18 +93,37 @@ We used **OpenAI GPT-4o via Azure** to synthetically generate QA pairs from long
 
 ---
 
-## 🧪 Evaluation
+## 🥪 Evaluation
 
-Custom evaluation script includes:
-- Model inference using prompt chaining.
-- Extraction of predicted `PointsMissed`.
-- Automatic JSON-based comparison with ground truth.
-- Metrics calculated:
-  - ✅ Precision
-  - ✅ Recall
-  - ✅ F1-score
+The model was evaluated by comparing predicted `PointsMissed` with the ground truth.
+
+### 📐 Metrics Calculation
+**Precision:** Measures how many predicted points were actually correct.
+```
+Precision = True Positives / (True Positives + False Positives)
+```
+
+**Recall:** Measures how many of the true missing points were recovered.
+```
+Recall = True Positives / (True Positives + False Negatives)
+```
+
+**F1-Score:** Harmonic mean of precision and recall.
+```
+F1 = 2 * (Precision * Recall) / (Precision + Recall)
+```
+
+### 🔍 Evaluation Example
+```json
+Predicted: {"PointsMissed": ["Point A", "Point B"]}
+Ground Truth: {"PointsMissed": ["Point A", "Point C"]}
+```
+- True Positive: Point A
+- False Positive: Point B
+- False Negative: Point C
 
 ---
+
 ## 📈 Results
 
 Our fine-tuned models were evaluated against GPT-4o, Gemini, and base models using precision, recall, and F1-score. Below is the performance comparison:
@@ -92,20 +144,19 @@ Our fine-tuned models were evaluated against GPT-4o, Gemini, and base models usi
 
 > ✅ **Best Performing Model**: `Mistral-7B Instruct Finetuned`  
 > 📉 **Notably Outperformed**: `ChatGPT-4o`, `Gemini 2.0`, and all base models  
-> 🎯 Domain-specific fine-tuning showed consistent improvements in task performance.
+> 🌟 Domain-specific fine-tuning showed consistent improvements in task performance.
 
-### Visualization of Results
-
-![Metrics Comparison](https://github.com/astronova001/finetuning-small-llms-to-outperform-large-models-on-specific-tasks/blob/main/Results/metrics_comparison.png)
+### 📊 Visualization of Results
+![Metrics Comparison](Results/metrics_comparison.png)
 *Comparison of precision, recall and F1 scores across all evaluated models*
 
-![Comprehensive Model Performance](https://github.com/astronova001/finetuning-small-llms-to-outperform-large-models-on-specific-tasks/blob/main/Results/model_performance_comparison.png)
+![Comprehensive Model Performance](Results/model_performance_comparison.png)
 *Detailed performance breakdown showing all metrics for each evaluated model*
 
-![Performance Heatmap](https://github.com/astronova001/finetuning-small-llms-to-outperform-large-models-on-specific-tasks/blob/main/Results/metrics_heatmap.png)
+![Performance Heatmap](Results/metrics_heatmap.png)
 *Heatmap visualization highlighting relative strengths and weaknesses across all models*
 
-![Precision Recall Bubble Chart](https://github.com/astronova001/finetuning-small-llms-to-outperform-large-models-on-specific-tasks/blob/main/Results/Precission_recall_bubble_size_representation.png)
+![Precision Recall Bubble Chart](Results/Precission_recall_bubble_size_representation.png)
 *Bubble chart visualization showing precision vs recall with F1-score represented by bubble size*
 
 ---
@@ -136,3 +187,4 @@ Final Year CSE (AI & ML) | Passionate about LLMs & domain-specific AI
 [LinkedIn](https://www.linkedin.com/in/b-s-vivek/) | [GitHub](https://github.com/astronova001)
 
 ---
+
