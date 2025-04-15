@@ -96,10 +96,7 @@ Our fine-tuned models were evaluated against GPT-4o, Gemini, and base models usi
 
 ### Visualization of Results
 
-![Precision Comparison](https://github.com/astronova001/finetuning-small-llms-to-outperform-large-models-on-specific-tasks/blob/main/Results/f1_score_comparison.png)
-*Precision scores across all evaluated models*
-
-![Recall Comparison](https://github.com/astronova001/finetuning-small-llms-to-outperform-large-models-on-specific-tasks/blob/main/Results/f1_score_comparison.png)
+![Recall Comparison](https://github.com/astronova001/finetuning-small-llms-to-outperform-large-models-on-specific-tasks/blob/main/Results/metrics_comparison.png)
 *Recall scores across all evaluated models*
 
 ![F1-Score Comparison](https://github.com/astronova001/finetuning-small-llms-to-outperform-large-models-on-specific-tasks/blob/main/Results/model_performance_comparison.png)
