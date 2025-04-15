@@ -105,6 +105,9 @@ Our fine-tuned models were evaluated against GPT-4o, Gemini, and base models usi
 ![Performance Heatmap](https://github.com/astronova001/finetuning-small-llms-to-outperform-large-models-on-specific-tasks/blob/main/Results/metrics_heatmap.png)
 *Heatmap visualization highlighting relative strengths and weaknesses across all models*
 
+![Precision Recall Bubble Chart](https://github.com/astronova001/finetuning-small-llms-to-outperform-large-models-on-specific-tasks/blob/main/Results/Precission_recall_bubble_size_representation.png)
+*Bubble chart visualization showing precision vs recall with F1-score represented by bubble size*
+
 ---
 
 ## 💬 Key Takeaways
