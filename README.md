@@ -23,6 +23,8 @@ This project demonstrates how a carefully fine-tuned domain-specific Language Mo
 │   ├── finetune.ipynb                # Fine-tuning using Unsloth & LoRA
 ├── Evaluation/
 │   ├── evaluate.ipynb                # Custom evaluation pipeline
+├── Results/
+│   ├── *.png                         # Performance visualization images
 ```
 
 ---
@@ -91,6 +93,20 @@ Our fine-tuned models were evaluated against GPT-4o, Gemini, and base models usi
 > ✅ **Best Performing Model**: `Mistral-7B Instruct Finetuned`  
 > 📉 **Notably Outperformed**: `ChatGPT-4o`, `Gemini 2.0`, and all base models  
 > 🎯 Domain-specific fine-tuning showed consistent improvements in task performance.
+
+### Visualization of Results
+
+![Precision Comparison](Results/precision_comparison.png)
+*Precision scores across all evaluated models*
+
+![Recall Comparison](Results/recall_comparison.png)
+*Recall scores across all evaluated models*
+
+![F1-Score Comparison](Results/f1_comparison.png)
+*F1-score comparison showing our fine-tuned model outperforming GPT-4o and Gemini*
+
+![Overall Performance](Results/overall_performance.png)
+*Comprehensive performance view of all metrics across evaluated models*
 
 ---
 
