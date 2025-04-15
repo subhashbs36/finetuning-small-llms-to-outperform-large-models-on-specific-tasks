@@ -1,7 +1,3 @@
-Perfect! Based on your three detailed documents (`Dataset_cration.pdf`, `Finetune.pdf`, and `Evaluate.pdf`), here’s a **clean and impressive `README.md`** you can use for your GitHub repo. It's structured to highlight your contribution, method, and results clearly.
-
----
-
 ## 🧠 Fine-Tuning a Domain-Specific LLM that Outperformed GPT-4o & Gemini
 
 This project demonstrates how a carefully fine-tuned domain-specific Language Model was able to outperform state-of-the-art models like **GPT-4o** and **Gemini** on a targeted task involving **missing key point identification** from text-based answers.
