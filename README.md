@@ -36,9 +36,9 @@ Given an answer generated from a long paragraph, the goal is to **evaluate wheth
 ---
 
 ### 📌 Project Highlights
-- 📔 Explore the dataset creation in [`Dataset/dataset_creation.ipynb`](Dataset/dataset_creation.ipynb)
-- 🔧 Fine-tuning notebook is available at [`Training/finetune.ipynb`](Training/finetune.ipynb)
-- 🧪 Evaluation notebook can be found at [`Evaluation/evaluate.ipynb`](Evaluation/evaluate.ipynb)
+- 📔 Explore the dataset creation in [`Dataset/dataset_creation.ipynb`](Dataset_creation/Dataset_cration.ipynb)
+- 🔧 Fine-tuning notebook is available at [`Training/finetune.ipynb`](Finetuning/Finetune.ipynb)
+- 🧪 Evaluation notebook can be found at [`Evaluation/evaluate.ipynb`](Evaluate/Evaluate.ipynb)
 - 🚀 Fine-tuned using the **LoRA technique** on a domain-specific dataset.
 - 📊 Outperformed GPT-4o and Gemini on precision, recall, and F1-score.
 - 📁 Includes **dataset creation**, **training**, and **evaluation** pipeline.
