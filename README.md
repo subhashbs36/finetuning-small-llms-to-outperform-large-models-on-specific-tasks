@@ -188,9 +188,10 @@ pip install unsloth
 
 ## 🧑‍💻 Author
 
-**Vivek B S**  
-Final Year CSE (AI & ML) | Passionate about LLMs & domain-specific AI  
-[LinkedIn](https://www.linkedin.com/in/b-s-vivek/) | [GitHub](https://github.com/astronova001)
+**Subhash B S**  
+M.S. in Computer Engineering | AI Engineer | ML Researcher | Generative AI | AI Agents | Computer Vision
+
+[LinkedIn](https://www.linkedin.com/in/subhash-b-s/) | [GitHub](https://github.com/subhashbs36)
 
 ---
 
