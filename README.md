@@ -1,3 +1,12 @@
+# Fine-tuning Small LLMs to Outperform Large Models on Specific Tasks
+
+[![Medium Article](https://img.shields.io/badge/Medium-Read%20Article-black?logo=medium)](https://medium.com/@subhashbs36/fine-tuning-small-llms-to-outperform-gpt-scale-giants-on-domain-specific-tasks-23325c328aea)
+[![LinkedIn Post](https://img.shields.io/badge/LinkedIn-View%20Post-blue?logo=linkedin)](https://www.linkedin.com/posts/subhash-b-s_llm-finetuning-mistral-activity-7318408395353403393-A0O8?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB6zPFMBq94dHRCrQiSY5eewRozi3DQzZhs)
+
+## Overview
+
+This repository contains resources and code for fine-tuning smaller language models to outperform larger models on domain-specific tasks.
+
 ## 🧠 Fine-Tuning a Domain-Specific LLM that Outperformed GPT-4o & Gemini
 
 This project explores how smaller, fine-tuned Language Models (LLMs) can outperform massive general-purpose models like **GPT-4o** and **Gemini** on **domain-specific tasks**. In this case, the task was to **identify missing key points** in answers generated from long-form content — a challenge where precision and contextual understanding are vital.
